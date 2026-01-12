@@ -6,8 +6,8 @@ const config: Config = {
   tagline: 'Build better code with PCode',
   favicon: 'img/favicon.ico',
 
-  url: 'https://pcode.docs',
-  baseUrl: '/',
+  url: 'https://pcode-org.github.io',
+  baseUrl: '/docs/',
 
   organizationName: 'pcode',
   projectName: 'pcode-docs',
@@ -20,7 +20,7 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          editUrl: 'https://github.com/pcode/pcode-docs/tree/main/',
+          editUrl: 'https://github.com/PCode-org/docs/tree/main/',
         },
         blog: {
           showReadingTime: true,
@@ -56,7 +56,7 @@ const config: Config = {
         },
         { to: '/blog', label: 'Blog', position: 'left' },
         {
-          href: 'https://github.com/pcode/pcode-docs',
+          href: 'https://github.com/PCode-org/docs',
           label: 'GitHub',
           position: 'right',
         },
@@ -70,7 +70,7 @@ const config: Config = {
           items: [
             {
               label: 'GitHub',
-              href: 'https://github.com/pcode/pcode-docs',
+              href: 'https://github.com/PCode-org/docs',
             },
           ],
         },
