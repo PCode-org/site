@@ -1,1 +1,0 @@
-"use strict";(globalThis.webpackChunkpcode_docs=globalThis.webpackChunkpcode_docs||[]).push([[8947],{6600(e){e.exports=JSON.parse('{"authors":[{"name":"PCode Team","title":"Team","url":"https://github.com/pcode/pcode-docs","imageURL":"https://github.com/pcode.png","key":"pcode-team","page":null,"count":1}]}')}}]);

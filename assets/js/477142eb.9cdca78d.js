@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkpcode_docs=globalThis.webpackChunkpcode_docs||[]).push([[8695],{830(e){e.exports=JSON.parse('{"tags":[{"label":"announcement","permalink":"/site/blog/tags/announcement","count":1},{"label":"welcome","permalink":"/site/blog/tags/welcome","count":1}]}')}}]);

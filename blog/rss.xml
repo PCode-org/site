@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
         <title>PCode Documentation Blog</title>
-        <link>https://pcode.docs/blog</link>
+        <link>https://pcode-org.github.io/site/blog</link>
         <description>PCode Documentation Blog</description>
         <lastBuildDate>Wed, 08 Jan 2025 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
@@ -10,14 +10,14 @@
         <language>en</language>
         <item>
             <title><![CDATA[Welcome to PCode]]></title>
-            <link>https://pcode.docs/blog/welcome</link>
-            <guid>https://pcode.docs/blog/welcome</guid>
+            <link>https://pcode-org.github.io/site/blog/welcome</link>
+            <guid>https://pcode-org.github.io/site/blog/welcome</guid>
             <pubDate>Wed, 08 Jan 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[Welcome to the PCode Documentation blog! This is the first post in our blog, and we're excited to have you here.]]></description>
             <content:encoded><![CDATA[<p>Welcome to the <strong>PCode Documentation</strong> blog! This is the first post in our blog, and we're excited to have you here.</p>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="about-pcode">About PCode<a href="https://pcode.docs/blog/welcome#about-pcode" class="hash-link" aria-label="Direct link to About PCode" title="Direct link to About PCode" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="about-pcode">About PCode<a href="https://pcode-org.github.io/site/blog/welcome#about-pcode" class="hash-link" aria-label="Direct link to About PCode" title="Direct link to About PCode" translate="no">​</a></h2>
 <p>PCode is a powerful tool designed to help developers build better code. Our documentation site is here to guide you through installation, features, and best practices.</p>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="whats-coming">What's Coming<a href="https://pcode.docs/blog/welcome#whats-coming" class="hash-link" aria-label="Direct link to What's Coming" title="Direct link to What's Coming" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="whats-coming">What's Coming<a href="https://pcode-org.github.io/site/blog/welcome#whats-coming" class="hash-link" aria-label="Direct link to What's Coming" title="Direct link to What's Coming" translate="no">​</a></h2>
 <p>We'll be sharing updates about:</p>
 <ul>
 <li class="">New features and releases</li>
@@ -25,9 +25,9 @@
 <li class="">Community highlights</li>
 <li class="">Behind-the-scenes insights</li>
 </ul>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="getting-started">Getting Started<a href="https://pcode.docs/blog/welcome#getting-started" class="hash-link" aria-label="Direct link to Getting Started" title="Direct link to Getting Started" translate="no">​</a></h2>
-<p>If you haven't already, check out our <a class="" href="https://pcode.docs/docs/quick-start/installation">Quick Start Guide</a> to get started with PCode.</p>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="stay-connected">Stay Connected<a href="https://pcode.docs/blog/welcome#stay-connected" class="hash-link" aria-label="Direct link to Stay Connected" title="Direct link to Stay Connected" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="getting-started">Getting Started<a href="https://pcode-org.github.io/site/blog/welcome#getting-started" class="hash-link" aria-label="Direct link to Getting Started" title="Direct link to Getting Started" translate="no">​</a></h2>
+<p>If you haven't already, check out our <a class="" href="https://pcode-org.github.io/site/docs/quick-start/installation">Quick Start Guide</a> to get started with PCode.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="stay-connected">Stay Connected<a href="https://pcode-org.github.io/site/blog/welcome#stay-connected" class="hash-link" aria-label="Direct link to Stay Connected" title="Direct link to Stay Connected" translate="no">​</a></h2>
 <p>Follow our <a href="https://github.com/pcode/pcode-docs" target="_blank" rel="noopener noreferrer" class="">GitHub repository</a> for the latest updates and contributions.</p>
 <div class="language-javascript codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#bfc7d5;--prism-background-color:#292d3e"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-javascript codeBlock_bY9V thin-scrollbar" style="color:#bfc7d5;background-color:#292d3e"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#bfc7d5"><span class="token comment" style="color:rgb(105, 112, 152);font-style:italic">// Welcome code example</span><span class="token plain"></span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain"></span><span class="token console class-name" style="color:rgb(255, 203, 107)">console</span><span class="token punctuation" style="color:rgb(199, 146, 234)">.</span><span class="token method function property-access" style="color:rgb(130, 170, 255)">log</span><span class="token punctuation" style="color:rgb(199, 146, 234)">(</span><span class="token string" style="color:rgb(195, 232, 141)">'Hello, PCode!'</span><span class="token punctuation" style="color:rgb(199, 146, 234)">)</span><span class="token punctuation" style="color:rgb(199, 146, 234)">;</span><br></span></code></pre></div></div>
 <div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>Note</div><div class="admonitionContent_BuS1"><p>This is a welcome blog post template. Customize it to fit your project's needs.</p></div></div>
