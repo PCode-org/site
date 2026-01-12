@@ -6,8 +6,8 @@ const config: Config = {
   tagline: 'Build better code with PCode',
   favicon: 'img/favicon.ico',
 
-  url: 'https://pcode-org.github.io',
-  baseUrl: '/docs/',
+  url: 'https://pcode-org.github.io/docs/',
+  baseUrl: '/',
 
   organizationName: 'pcode',
   projectName: 'pcode-docs',
