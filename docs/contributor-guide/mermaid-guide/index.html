@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-contributor-guide/mermaid-guide" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">Mermaid 图表使用指南 | PCode Documentation</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://pcode.docs/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://pcode.docs/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://pcode.docs/docs/contributor-guide/mermaid-guide"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Mermaid 图表使用指南 | PCode Documentation"><meta data-rh="true" name="description" content="学习如何在 PCode 文档中使用 Mermaid 图表来创建流程图、状态图、时序图等可视化内容"><meta data-rh="true" property="og:description" content="学习如何在 PCode 文档中使用 Mermaid 图表来创建流程图、状态图、时序图等可视化内容"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://pcode.docs/docs/contributor-guide/mermaid-guide"><link data-rh="true" rel="alternate" href="https://pcode.docs/docs/contributor-guide/mermaid-guide" hreflang="en"><link data-rh="true" rel="alternate" href="https://pcode.docs/docs/contributor-guide/mermaid-guide" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="PCode Documentation RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/blog/atom.xml" title="PCode Documentation Atom Feed"><link rel="stylesheet" href="/assets/css/styles.b507c867.css">
+<script src="/assets/js/runtime~main.0a043759.js" defer="defer"></script>
+<script src="/assets/js/main.cbb2a38b.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/logo.svg" alt="PCode Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/logo.svg" alt="PCode Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">PCode Docs</b></a><a class="navbar__item navbar__link" href="/docs/quick-start">Docs</a><a class="navbar__item navbar__link" href="/blog">Blog</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://github.com/pcode/pcode-docs" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><main class="docMainContainer_TBSr docMainContainerEnhanced_lQrH"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Mermaid 图表使用指南</h1></header>
+<p>本文档介绍如何在 PCode 文档中使用 Mermaid 图表来创建各种技术图表。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="什么是-mermaid">什么是 Mermaid？<a href="#什么是-mermaid" class="hash-link" aria-label="Direct link to 什么是 Mermaid？" title="Direct link to 什么是 Mermaid？" translate="no">​</a></h2>
+<p>Mermaid 是一个基于文本的图表生成工具，允许你使用简单的文本语法创建各种类型的图表。在 PCode 文档中，Mermaid 图表会自动渲染为 SVG 图形，并支持亮色和暗色主题切换。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="支持的图表类型">支持的图表类型<a href="#支持的图表类型" class="hash-link" aria-label="Direct link to 支持的图表类型" title="Direct link to 支持的图表类型" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-流程图-flowchart">1. 流程图 (Flowchart)<a href="#1-流程图-flowchart" class="hash-link" aria-label="Direct link to 1. 流程图 (Flowchart)" title="Direct link to 1. 流程图 (Flowchart)" translate="no">​</a></h3>
+<p>流程图用于展示流程、决策路径和系统架构。</p>
+<!-- -->
+<p><strong>语法说明：</strong></p>
+<ul>
+<li class=""><code>graph TD</code> - 从上到下的流程图（TD = Top Down）</li>
+<li class=""><code>graph LR</code> - 从左到右的流程图（LR = Left Right）</li>
+<li class=""><code>A[文本]</code> - 矩形节点</li>
+<li class=""><code>A{文本}</code> - 菱形决策节点</li>
+<li class=""><code>--&gt;</code> - 箭头连接</li>
+<li class=""><code>|标签|</code> - 连接线上的标签</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-状态图-state-diagram">2. 状态图 (State Diagram)<a href="#2-状态图-state-diagram" class="hash-link" aria-label="Direct link to 2. 状态图 (State Diagram)" title="Direct link to 2. 状态图 (State Diagram)" translate="no">​</a></h3>
+<p>状态图用于展示系统状态及其转换。</p>
+<!-- -->
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-时序图-sequence-diagram">3. 时序图 (Sequence Diagram)<a href="#3-时序图-sequence-diagram" class="hash-link" aria-label="Direct link to 3. 时序图 (Sequence Diagram)" title="Direct link to 3. 时序图 (Sequence Diagram)" translate="no">​</a></h3>
+<p>时序图用于展示组件之间的交互顺序。</p>
+<!-- -->
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="4-类图-class-diagram">4. 类图 (Class Diagram)<a href="#4-类图-class-diagram" class="hash-link" aria-label="Direct link to 4. 类图 (Class Diagram)" title="Direct link to 4. 类图 (Class Diagram)" translate="no">​</a></h3>
+<p>类图用于展示类结构和关系。</p>
+<!-- -->
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="5-实体关系图-er-diagram">5. 实体关系图 (ER Diagram)<a href="#5-实体关系图-er-diagram" class="hash-link" aria-label="Direct link to 5. 实体关系图 (ER Diagram)" title="Direct link to 5. 实体关系图 (ER Diagram)" translate="no">​</a></h3>
+<p>ER 图用于展示数据库架构。</p>
+<!-- -->
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="6-用户旅程图-user-journey">6. 用户旅程图 (User Journey)<a href="#6-用户旅程图-user-journey" class="hash-link" aria-label="Direct link to 6. 用户旅程图 (User Journey)" title="Direct link to 6. 用户旅程图 (User Journey)" translate="no">​</a></h3>
+<p>用户旅程图展示用户体验流程。</p>
+<!-- -->
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="7-甘特图-gantt-chart">7. 甘特图 (Gantt Chart)<a href="#7-甘特图-gantt-chart" class="hash-link" aria-label="Direct link to 7. 甘特图 (Gantt Chart)" title="Direct link to 7. 甘特图 (Gantt Chart)" translate="no">​</a></h3>
+<p>甘特图用于项目时间规划。</p>
+<!-- -->
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="最佳实践">最佳实践<a href="#最佳实践" class="hash-link" aria-label="Direct link to 最佳实践" title="Direct link to 最佳实践" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="保持简洁">保持简洁<a href="#保持简洁" class="hash-link" aria-label="Direct link to 保持简洁" title="Direct link to 保持简洁" translate="no">​</a></h3>
+<ul>
+<li class="">每个图表的节点数量建  议控制在 20 个以内</li>
+<li class="">复杂的图表应考虑拆分为多个简单图表</li>
+<li class="">使用清晰的节点标签和连接线标签</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="使用中文标签">使用中文标签<a href="#使用中文标签" class="hash-link" aria-label="Direct link to 使用中文标签" title="Direct link to 使用中文标签" translate="no">​</a></h3>
+<!-- -->
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="选择合适的图表类型">选择合适的图表类型<a href="#选择合适的图表类型" class="hash-link" aria-label="Direct link to 选择合适的图表类型" title="Direct link to 选择合适的图表类型" translate="no">​</a></h3>
+<table><thead><tr><th>需求</th><th>推荐图表类型</th></tr></thead><tbody><tr><td>展示流程或决策</td><td>流程图 (flowchart)</td></tr><tr><td>展示状态变化</td><td>状态图 (stateDiagram)</td></tr><tr><td>展示交互顺序</td><td>时序图 (sequenceDiagram)</td></tr><tr><td>展示类结构</td><td>类图 (classDiagram)</td></tr><tr><td>展示数据库关系</td><td>ER 图 (erDiagram)</td></tr><tr><td>展示时间计划</td><td>甘特图 (gantt)</td></tr><tr><td>展示用户体验</td><td>用户旅程图 (journey)</td></tr></tbody></table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="主题适配">主题适配<a href="#主题适配" class="hash-link" aria-label="Direct link to 主题适配" title="Direct link to 主题适配" translate="no">​</a></h3>
+<p>Mermaid 图表会自动适配站点的亮色和暗色主题。无需额外配置，图表会根据用户选择的主题自动更新颜色。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="何时使用-mermaid-vs-静态图片">何时使用 Mermaid vs 静态图片<a href="#何时使用-mermaid-vs-静态图片" class="hash-link" aria-label="Direct link to 何时使用 Mermaid vs 静态图片" title="Direct link to 何时使用 Mermaid vs 静态图片" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="使用-mermaid-的场景">使用 Mermaid 的场景<a href="#使用-mermaid-的场景" class="hash-link" aria-label="Direct link to 使用 Mermaid 的场景" title="Direct link to 使用 Mermaid 的场景" translate="no">​</a></h3>
+<p>✅ 需要频繁更新的图表
+✅ 需要版本控制的图表
+✅ 相对简单的技术图表
+✅ 需要支持主题切换的图表
+✅ 需要可搜索的文本内容</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="使用静态图片的场景">使用静态图片的场景<a href="#使用静态图片的场景" class="hash-link" aria-label="Direct link to 使用静态图片的场景" title="Direct link to 使用静态图片的场景" translate="no">​</a></h3>
+<p>✅ 高度复杂的手绘图表
+✅ 需要特殊样式的定制图表
+✅ 包含大量视觉元素的营销图表
+✅ 无法用 Mermaid 表达的特殊图表</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="故障排除">故障排除<a href="#故障排除" class="hash-link" aria-label="Direct link to 故障排除" title="Direct link to 故障排除" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="图表未渲染">图表未渲染<a href="#图表未渲染" class="hash-link" aria-label="Direct link to 图表未渲染" title="Direct link to 图表未渲染" translate="no">​</a></h3>
+<p>如果图表显示为代码块而不是图形：</p>
+<ol>
+<li class="">检查代码块是否使用 <code>mermaid</code> 语言标识</li>
+<li class="">确保 <code>docusaurus.config.ts</code> 中已配置 <code>mermaid</code> 选项</li>
+<li class="">清除 Docusaurus 缓存：<code>npm run clear</code></li>
+<li class="">重新构建项目：<code>npm run build</code></li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="主题显示不正确">主题显示不正确<a href="#主题显示不正确" class="hash-link" aria-label="Direct link to 主题显示不正确" title="Direct link to 主题显示不正确" translate="no">​</a></h3>
+<p>如果图表在  切换主题后颜色不正确：</p>
+<ol>
+<li class="">确认配置中设置了 <code>theme.light</code> 和 <code>theme.dark</code></li>
+<li class="">刷新浏览器页面</li>
+<li class="">清除浏览器缓存</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="构建失败">构建失败<a href="#构建失败" class="hash-link" aria-label="Direct link to 构建失败" title="Direct link to 构建失败" translate="no">​</a></h3>
+<p>如果添加 Mermaid 图表后构建失败：</p>
+<ol>
+<li class="">检查 Mermaid 语法是否正确</li>
+<li class="">使用 <a href="https://mermaid.live/" target="_blank" rel="noopener noreferrer" class="">Mermaid 在线编辑器</a> 验证语法</li>
+<li class="">检查是否有未闭合的代码块</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="参考资源">参考资源<a href="#参考资源" class="hash-link" aria-label="Direct link to 参考资源" title="Direct link to 参考资源" translate="no">​</a></h2>
+<ul>
+<li class=""><a href="https://mermaid.js.org/" target="_blank" rel="noopener noreferrer" class="">Mermaid 官方文档</a></li>
+<li class=""><a href="https://mermaid.js.org/syntax/flowchart.html" target="_blank" rel="noopener noreferrer" class="">Mermaid 语法指南</a></li>
+<li class=""><a href="https://mermaid.live/" target="_blank" rel="noopener noreferrer" class="">Mermaid 在线编辑器</a></li>
+<li class=""><a href="https://docusaurus.io/docs/markdown-features/assets#mermaid-diagrams" target="_blank" rel="noopener noreferrer" class="">Docusaurus Mermaid 集成文档</a></li>
+</ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/pcode/pcode-docs/tree/main/docs/contributor-guide/mermaid-guide.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#什么是-mermaid" class="table-of-contents__link toc-highlight">什么是 Mermaid？</a></li><li><a href="#支持的图表类型" class="table-of-contents__link toc-highlight">支持的图表类型</a><ul><li><a href="#1-流程图-flowchart" class="table-of-contents__link toc-highlight">1. 流程图 (Flowchart)</a></li><li><a href="#2-状态图-state-diagram" class="table-of-contents__link toc-highlight">2. 状态图 (State Diagram)</a></li><li><a href="#3-时序图-sequence-diagram" class="table-of-contents__link toc-highlight">3. 时序图 (Sequence Diagram)</a></li><li><a href="#4-类图-class-diagram" class="table-of-contents__link toc-highlight">4. 类图 (Class Diagram)</a></li><li><a href="#5-实体关系图-er-diagram" class="table-of-contents__link toc-highlight">5. 实体关系图 (ER Diagram)</a></li><li><a href="#6-用户旅程图-user-journey" class="table-of-contents__link toc-highlight">6. 用户旅程图 (User Journey)</a></li><li><a href="#7-甘特图-gantt-chart" class="table-of-contents__link toc-highlight">7. 甘特图 (Gantt Chart)</a></li></ul></li><li><a href="#最佳实践" class="table-of-contents__link toc-highlight">最佳实践</a><ul><li><a href="#保持简洁" class="table-of-contents__link toc-highlight">保持简洁</a></li><li><a href="#使用中文标签" class="table-of-contents__link toc-highlight">使用中文标签</a></li><li><a href="#选择合适的图表类型" class="table-of-contents__link toc-highlight">选择合适的图表类型</a></li><li><a href="#主题适配" class="table-of-contents__link toc-highlight">主题适配</a></li></ul></li><li><a href="#何时使用-mermaid-vs-静态图片" class="table-of-contents__link toc-highlight">何时使用 Mermaid vs 静态图片</a><ul><li><a href="#使用-mermaid-的场景" class="table-of-contents__link toc-highlight">使用 Mermaid 的场景</a></li><li><a href="#使用静态图片的场景" class="table-of-contents__link toc-highlight">使用静态图片的场景</a></li></ul></li><li><a href="#故障排除" class="table-of-contents__link toc-highlight">故障排除</a><ul><li><a href="#图表未渲染" class="table-of-contents__link toc-highlight">图表未渲染</a></li><li><a href="#主题显示不正确" class="table-of-contents__link toc-highlight">主题显示不正确</a></li><li><a href="#构建失败" class="table-of-contents__link toc-highlight">构建失败</a></li></ul></li><li><a href="#参考资源" class="table-of-contents__link toc-highlight">参考资源</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/pcode/pcode-docs" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/blog">Blog</a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 PCode. Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>
