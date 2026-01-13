@@ -105,7 +105,7 @@ npm --version
 OpenSpec 是一个用于管理提案和规范的工具。全局安装它：
 
 ```bash
-npm install -g @openspec/cli
+npm install -g @fission-ai/openspec@latest
 ```
 
 验证安装：
