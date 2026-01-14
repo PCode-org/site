@@ -4,6 +4,10 @@
 
 <p>用 AI 重新定义代码开发体验</p>
 
+<img src="./static/img/home/亮色主题主界面.png" alt="Hagicode 主界面" width="800"/>
+
+<br>
+
 <a href="https://hagicode-org.github.io/site/">🌐 访问官网</a>
 
 </div>
@@ -137,6 +141,12 @@
 </tr>
 </table>
 
+<div align="center">
+  <img src="./static/img/create-proposal-session/3.主意的9个阶段展示.png" alt="OpenSpec 9 阶段工作流" width="800"/>
+  <br><br>
+  <img src="./static/img/create-proposal-session/19.规划正在执行的阶段展示.png" alt="规划执行状态" width="800"/>
+</div>
+
 ---
 
 ## 便捷 · 多线程操作
@@ -165,6 +175,10 @@
 </table>
 
 <p><strong>体验提升 1.5x — 5x</strong></p>
+
+<div align="center">
+  <img src="./static/img/home/使用 AI 的效率提升报告.png" alt="AI 效率提升报告" width="800"/>
+</div>
 
 ---
 
@@ -245,6 +259,12 @@ Tokens<br>
 </td>
 </tr>
 </table>
+
+<div align="center">
+  <img src="./static/img/home/每日成就报告.png" alt="每日成就报告" width="700"/>
+  <br><br>
+  <img src="./static/img/home/每日编写代码获得的成就.png" alt="成就徽章" width="700"/>
+</div>
 
 ---
 
