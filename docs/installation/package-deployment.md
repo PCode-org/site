@@ -115,6 +115,43 @@ Hagicode 的 AI 驱动功能需要 Claude Code CLI。
 claude --version
 ```
 
+## 从 GitHub Releases 下载
+
+Hagicode 软件包发布在 GitHub Releases 上，您可以从那里下载最新版本或特定版本的软件包。
+
+### 访问 Releases 页面
+
+导航到 [Hagicode Releases 页面](https://github.com/Hagicode-org/releases/releases) 查看所有可用版本。
+
+### 选择版本
+
+1. **最新版本**：页面顶部默认显示最新稳定版本，推荐大多数用户使用
+2. **特定版本**：向下滚动可以查看历史版本，适用于需要版本回退或测试的场景
+
+### 下载平台特定软件包
+
+每个版本包含针对不同平台的软件包：
+
+<Tabs>
+  <TabItem value="win" label="Windows">
+    下载 `.zip` 格式的压缩包，例如：
+    - `hagicode-win-x64.zip` - Windows 64 位软件包
+  </TabItem>
+  <TabItem value="mac" label="macOS">
+    下载 `.tar.gz` 格式的压缩包，例如：
+    - `hagicode-osx-x64.tar.gz` - macOS Intel 64 位软件包
+    - `hagicode-osx-arm64.tar.gz` - macOS Apple Silicon (M1/M2) 软件包
+  </TabItem>
+  <TabItem value="linux" label="Linux">
+    下载 `.tar.gz` 格式的压缩包，例如：
+    - `hagicode-linux-x64.tar.gz` - Linux 64 位软件包
+  </TabItem>
+</Tabs>
+
+:::tip 验证下载
+下载完成后，建议验证文件的校验和（如果提供）以确保文件完整性。
+:::
+
 ## 部署软件包
 
 Hagicode 以软件包的形式分发，您需要下载并解压到本地机器。

@@ -1519,65 +1519,53 @@ The documentation site MUST provide a comprehensive guide for deploying Hagicode
 
 ### Requirement: Installation Documentation Structure
 
-The documentation site MUST restructure installation documentation into a dedicated `docs/installation/` directory with two separate deployment methods (Docker Compose as primary, package deployment as alternative), clear recommendation guidance, and proper sidebar organization.
+The documentation site MUST restructure installation documentation into a dedicated `docs/installation/` directory with two separate deployment methods (Docker Compose as primary, package deployment as alternative), clear recommendation guidance, and proper sidebar organization. The package deployment guide MUST include instructions for obtaining the software package through GitHub Releases.
 
-#### Scenario: Installation directory exists with proper structure
+#### Scenario: Package deployment guide includes GitHub Releases download section
 
-- **GIVEN** the documentation restructure is complete
-- **WHEN** listing the `docs/installation/` directory
-- **THEN** the following files MUST exist:
-  - `_category_.json` - Category metadata
-  - `docker-compose.md` - Docker Compose deployment guide (recommended)
-  - `package-deployment.md` - Software package deployment guide (alternative)
+- **GIVEN** the user is viewing the package deployment guide at `docs/installation/package-deployment.md`
+- **WHEN** the user reads the software package acquisition section
+- **THEN** the guide MUST include a "从 GitHub Releases 下载" section
+- **AND** the section MUST provide a direct link to `https://github.com/Hagicode-org/releases/releases`
+- **AND** the section MUST explain that precompiled software packages are available for download
+- **AND** the section MUST document how to select the appropriate version
+- **AND** the section MUST explain how to download platform-specific packages (Windows .zip, macOS/Linux .tar.gz)
 
-#### Scenario: Installation category metadata is configured
+#### Scenario: GitHub Releases section provides clear user instructions
 
-- **GIVEN** the `docs/installation/_category_.json` file exists
-- **WHEN** the file is parsed by Docusaurus
-- **THEN** the category displays with the label "安装指南"
-- **AND** the category position is configured to appear prominently in the sidebar
-- **AND** the category is configured as collapsible
+- **GIVEN** the user has navigated to the GitHub Releases download section
+- **WHEN** the user reads the instructions
+- **THEN** the section MUST include step-by-step guidance:
+  1. Navigate to the GitHub Releases page
+  2. Select the desired version (latest or specific version)
+  3. Choose the appropriate package for the platform
+  4. Download the package to the local machine
+- **AND** the instructions MUST be written in clear Chinese
+- **AND** platform-specific file formats MUST be clearly indicated
 
-#### Scenario: Sidebar includes installation category
+#### Scenario: GitHub Releases link is accessible and accurate
 
-- **GIVEN** the `sidebars.ts` has been updated
-- **WHEN** the user views the documentation sidebar
-- **THEN** an "安装指南" category MUST be visible
-- **AND** the category MUST contain both deployment method documents
-- **AND** the Docker Compose guide MUST appear first (as the recommended method)
-- **AND** the package deployment guide MUST appear second
+- **GIVEN** the package deployment guide includes a GitHub Releases link
+- **WHEN** a user clicks on the link
+- **THEN** the link MUST navigate to the correct GitHub repository releases page
+- **AND** no 404 error MUST occur
+- **AND** the releases page MUST display available Hagicode releases
 
-#### Scenario: Quick start category no longer contains installation guide
+#### Scenario: Documentation maintains consistency with existing style
 
-- **GIVEN** the installation guide has been moved to the installation category
-- **WHEN** the user views the Quick Start category
-- **THEN** the installation guide MUST NOT appear in Quick Start
-- **AND** Quick Start MUST contain only quick-start specific content (project creation, session management)
+- **GIVEN** the GitHub Releases section has been added to the package deployment guide
+- **WHEN** comparing the new section to existing content
+- **THEN** the section MUST use the same markdown formatting conventions
+- **AND** the section MUST follow the same Chinese terminology style
+- **AND** the section MUST integrate seamlessly with the "部署软件包" section
+- **AND** proper use of Docusaurus components (if applicable) MUST be maintained
 
-#### Scenario: Recommendation guidance is clear
+#### Scenario: Internal links remain functional after changes
 
-- **GIVEN** the user is choosing an installation method
-- **WHEN** the user views the installation category
-- **THEN** the Docker Compose guide MUST be marked as "推荐" (recommended)
-- **AND** both guides MUST include a comparison section explaining:
-  - Docker Compose advantages: environment isolation, one-command deployment, easy management, suitable for development and testing
-  - Package deployment use cases: fine-grained control, no Docker requirement, production native deployment
-
-#### Scenario: Internal links are updated after move
-
-- **GIVEN** the installation guide has been moved from `docs/quick-start/installation.md`
-- **WHEN** the user views other documentation pages
-- **THEN** all links to the old installation path MUST be updated to point to `docs/installation/`
-- **AND** no broken links to the installation guide MUST exist
-- **AND** the package-deployment.md MUST have updated internal references
-
-#### Scenario: Quick start guides reference installation category
-
-- **GIVEN** the user is starting with Hagicode for the first time
-- **WHEN** the user views quick start documentation
-- **THEN** appropriate quick start guides MUST reference the installation category
-- **AND** users MUST be directed to choose their preferred installation method
-- **AND** the guidance MUST help users decide between Docker Compose and package deployment
+- **GIVEN** the package deployment guide has been updated with the new section
+- **WHEN** the user navigates to other documentation pages
+- **THEN** all links to the package deployment guide MUST continue to work
+- **AND** no broken links MUST exist in the installation documentation
 
 ### Requirement: Package Deployment Documentation Migration
 
@@ -1687,4 +1675,117 @@ The homepage MUST include a video player component that displays the product int
 - **AND** native video controls SHALL be keyboard accessible
 - **AND** the poster image SHALL have descriptive alt text
 - **AND** the video SHALL have a title attribute describing the content
+
+### Requirement: QQ Group Links in Navigation Elements
+
+The documentation site MUST provide QQ group join links in multiple navigation locations to enable users to easily access technical support community.
+
+#### Scenario: Navbar displays QQ group link
+
+- **GIVEN** the Docusaurus site is running
+- **WHEN** a user views the top navigation bar
+- **THEN** a "QQ群" link SHALL be displayed in the right-aligned navigation items
+- **AND** the link SHALL point to `https://qm.qq.com/q/Wk6twXHdyS`
+- **AND** clicking the link SHALL open the QQ group join page in a new tab
+
+#### Scenario: Footer displays QQ group link in Community section
+
+- **GIVEN** a user scrolls to the bottom of any page
+- **WHEN** the user views the footer's Community section
+- **THEN** a "QQ技术支持群 (610394020)" or "HagiCode 技术支持 QQ 群 610394020" link SHALL be displayed
+- **AND** the link SHALL point to `https://qm.qq.com/q/Wk6twXHdyS`
+- **AND** the link SHALL be positioned alongside the GitHub link
+- **AND** clicking the link SHALL open the QQ group join page in a new tab
+
+---
+
+### Requirement: Homepage QQ Group Card Component
+
+The homepage MUST include a QQ group card component in the Hero section that provides a prominent call-to-action for joining the technical support community.
+
+#### Scenario: QQ group card displays on homepage
+
+- **GIVEN** a user navigates to the homepage
+- **WHEN** the Hero section is rendered
+- **THEN** a QQ group card SHALL be displayed after the hero buttons
+- **AND** the card SHALL include:
+  - A handshake or community emoji icon (🤝)
+  - A title: "加入技术支持群组"
+  - A description: "HagiCode 技术支持 QQ 群 610394020"
+  - A CTA button: "立即加入"
+- **AND** the button SHALL link to `https://qm.qq.com/q/Wk6twXHdyS`
+
+#### Scenario: QQ group card matches site design system
+
+- **GIVEN** the QQ group card is rendered on the homepage
+- **WHEN** comparing the card to other homepage elements
+- **THEN** the card SHALL use the same border-radius (24px) as feature cards
+- **AND** the card SHALL display a gradient border effect on hover
+- **AND** the card SHALL use site CSS variables for colors and shadows
+- **AND** the card SHALL adapt properly to light and dark themes
+
+#### Scenario: QQ group card is responsive
+
+- **GIVEN** the QQ group card is displayed on the homepage
+- **WHEN** viewed on different screen sizes
+- **THEN** on desktop (>1024px) the card SHALL have a max-width of 500px and be centered
+- **AND** on tablet (768px-1024px) the card SHALL scale appropriately maintaining readability
+- **AND** on mobile (<768px) the card SHALL span full width with appropriate padding
+
+---
+
+### Requirement: External Links Open in New Tab
+
+All QQ group links throughout the site MUST open in a new browser tab to preserve the user's context on the documentation site.
+
+#### Scenario: Navbar QQ link opens in new tab
+
+- **GIVEN** a user is viewing any page of the documentation site
+- **WHEN** the user clicks the "QQ群" link in the navbar
+- **THEN** the QQ group join page SHALL open in a new browser tab
+- **AND** the original documentation page SHALL remain open and accessible
+
+#### Scenario: Homepage QQ card button opens in new tab
+
+- **GIVEN** a user is viewing the homepage
+- **WHEN** the user clicks the "立即加入" button in the QQ group card
+- **THEN** the QQ group join page SHALL open in a new browser tab
+- **AND** the homepage SHALL remain open and accessible
+
+#### Scenario: Footer QQ link opens in new tab
+
+- **GIVEN** a user is viewing any page of the documentation site
+- **WHEN** the user clicks the "QQ技术支持群" link in the footer
+- **THEN** the QQ group join page SHALL open in a new browser tab
+- **AND** the original documentation page SHALL remain open and accessible
+
+---
+
+### Requirement: QQ Group Links Accessibility
+
+QQ group links MUST meet web accessibility standards to ensure users with disabilities can effectively access the community support resources.
+
+#### Scenario: QQ group links are keyboard navigable
+
+- **GIVEN** a user navigates the site using only a keyboard
+- **WHEN** the user presses Tab to move focus
+- **THEN** all QQ group links (navbar, homepage card, footer) SHALL receive focus in a logical order
+- **AND** focus indicators SHALL be clearly visible on all QQ group links
+- **AND** all QQ group links SHALL be activatable via the Enter key
+
+#### Scenario: QQ group links have descriptive text
+
+- **GIVEN** a screen reader user encounters a QQ group link
+- **WHEN** the screen reader announces the link
+- **THEN** the link text SHALL clearly indicate its purpose ("QQ群", "加入技术支持群组", "QQ技术支持群")
+- **AND** the link text SHALL include context about the QQ group number (610394020)
+- **AND** the purpose of the link SHALL be unambiguous to screen reader users
+
+#### Scenario: QQ group card has sufficient color contrast
+
+- **GIVEN** the QQ group card is displayed on the homepage
+- **WHEN** color contrast is evaluated
+- **THEN** all text in the card SHALL meet WCAG AA contrast requirements (4.5:1 for normal text)
+- **AND** the card SHALL be readable in both light and dark themes
+- **AND** color SHALL NOT be the only means of conveying the card's interactive nature
 

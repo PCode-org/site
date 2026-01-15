@@ -59,6 +59,11 @@ const config: Config = {
         },
         { to: '/blog', label: 'Blog', position: 'left' },
         {
+          href: 'https://qm.qq.com/q/Wk6twXHdyS',
+          label: 'QQ群',
+          position: 'right',
+        },
+        {
           href: 'https://github.com/Hagicode-org/hagicode-docs',
           label: 'GitHub',
           position: 'right',
@@ -74,6 +79,10 @@ const config: Config = {
             {
               label: 'GitHub',
               href: 'https://github.com/Hagicode-org/hagicode-docs',
+            },
+            {
+              label: 'QQ技术支持群 (610394020)',
+              href: 'https://qm.qq.com/q/Wk6twXHdyS',
             },
           ],
         },

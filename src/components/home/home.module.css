@@ -301,6 +301,96 @@
 }
 
 /* ==========================================================================
+   QQ Group Card - Community call-to-action card
+   ========================================================================== */
+
+.qqGroupCard {
+  position: relative;
+  background: var(--ifm-background-surface-color);
+  border-radius: 24px;
+  padding: 2rem;
+  text-align: center;
+  margin: 2rem auto 0;
+  max-width: 500px;
+  transition: all var(--pc-transition-normal);
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  overflow: hidden;
+}
+
+/* Gradient border effect */
+.qqGroupCard::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(135deg, var(--pc-gradient-1), var(--pc-gradient-2), var(--pc-accent));
+  border-radius: inherit;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity var(--pc-transition-normal);
+}
+
+.qqGroupCard:hover::before {
+  opacity: 1;
+}
+
+.qqGroupCardIcon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+  transition: transform var(--pc-transition-normal);
+}
+
+.qqGroupCard:hover .qqGroupCardIcon {
+  transform: scale(1.1);
+}
+
+.qqGroupCardTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  background: linear-gradient(135deg, var(--pc-accent), var(--pc-gradient-3));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.01em;
+}
+
+.qqGroupCardDescription {
+  font-size: 1rem;
+  color: var(--ifm-color-emphasis-600);
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.qqGroupCard a {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 100px;
+  text-decoration: none !important;
+  transition: all var(--pc-transition-normal);
+}
+
+.qqGroupCard .button--primary {
+  background: linear-gradient(135deg, var(--pc-accent), var(--pc-gradient-3));
+  border: none;
+  color: white !important;
+  box-shadow: 0 8px 24px var(--pc-accent-glow);
+}
+
+.qqGroupCard .button--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px var(--pc-accent-glow);
+}
+
+.qqGroupCard:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--pc-card-shadow-hover);
+}
+
+/* ==========================================================================
    Features Section - 3D tilt cards with gradient borders
    ========================================================================== */
 
@@ -1021,6 +1111,23 @@
   .heroButtons a {
     width: 100%;
     max-width: 320px;
+  }
+
+  .qqGroupCard {
+    padding: 1.5rem;
+    margin: 1.5rem auto 0;
+  }
+
+  .qqGroupCardIcon {
+    font-size: 2rem;
+  }
+
+  .qqGroupCardTitle {
+    font-size: 1.25rem;
+  }
+
+  .qqGroupCardDescription {
+    font-size: 0.9rem;
   }
 
   .featuresGrid {

@@ -34,6 +34,21 @@ export default function HeroSection(): JSX.Element {
             了解更多
           </Link>
         </div>
+        <div className={styles.qqGroupCard}>
+          <div className={styles.qqGroupCardIcon}>🤝</div>
+          <h3 className={styles.qqGroupCardTitle}>加入技术支持群组</h3>
+          <p className={styles.qqGroupCardDescription}>
+            HagiCode 技术支持 QQ 群 610394020
+          </p>
+          <a
+            href="https://qm.qq.com/q/Wk6twXHdyS"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="button button--primary"
+          >
+            立即加入
+          </a>
+        </div>
       </div>
     </section>
   );
