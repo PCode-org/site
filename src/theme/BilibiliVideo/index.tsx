@@ -37,7 +37,7 @@ export default function BilibiliVideo({
   const [hasError, setHasError] = useState(false);
 
   // Build the Bilibili iframe URL
-  const iframeSrc = `//player.bilibili.com/player.html?isOutside=true&aid=115898165822763&bvid=${bvid}&cid=${cid}&p=${p}`;
+  const iframeSrc = `//player.bilibili.com/player.html?isOutside=true&autoplay=0&aid=115898165822763&bvid=${bvid}&cid=${cid}&p=${p}`;
 
   // Handle iframe load events
   const handleIframeLoad = () => {

@@ -1,9 +1,6 @@
 import type { Config } from '@docusaurus/types';
 import type { Options as PresetOptions } from '@docusaurus/preset-classic';
 
-// Read CLARITY_PROJECT_ID from environment
-const CLARITY_PROJECT_ID = process.env.CLARITY_PROJECT_ID;
-
 const config: Config = {
   title: 'Hagicode Documentation',
   tagline: 'Build better code with Hagicode',
@@ -16,14 +13,6 @@ const config: Config = {
   projectName: 'hagicode-docs',
 
   onBrokenLinks: 'throw',
-
-  // Inject inline script to make CLARITY_PROJECT_ID available to client code
-  scripts: CLARITY_PROJECT_ID ? [
-    {
-      src: `data:text/javascript;charset=utf-8,window.__CLARITY_PROJECT_ID__="${CLARITY_PROJECT_ID}";`,
-      async: false,
-    },
-  ] : [],
 
   presets: [
     [
@@ -47,6 +36,14 @@ const config: Config = {
     ],
   ],
   themes: ['@docusaurus/theme-mermaid'],
+  plugins: process.env.CLARITY_PROJECT_ID ? [
+    [
+      '@gracefullight/docusaurus-plugin-microsoft-clarity',
+      {
+        projectId: process.env.CLARITY_PROJECT_ID,
+      },
+    ],
+  ] : [],
   markdown: {
     mermaid: true,
   },

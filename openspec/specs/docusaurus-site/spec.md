@@ -1815,7 +1815,7 @@ QQ group links MUST meet web accessibility standards to ensure users with disabi
 
 ### Requirement: Bilibili Video Player Component
 
-The homepage MUST include a Bilibili video player component that displays the "每天哈基半小时，AI多任务编程实战" demonstration video with proper responsive design and theme support.
+The homepage MUST include a Bilibili video player component that displays the "每天哈基半小时，AI多任务编程实战" demonstration video with proper responsive design and theme support. The video player MUST NOT automatically play when the page loads; users MUST manually click the play button to start video playback.
 
 #### Scenario: Video player displays on homepage
 
@@ -1825,15 +1825,18 @@ The homepage MUST include a Bilibili video player component that displays the "�
 - **AND** the section SHALL include a title "编程实战演示视频"
 - **AND** the section SHALL include a description "观看《每天哈基半小时，AI多任务编程实战》"
 - **AND** a Bilibili embedded player SHALL be displayed in a responsive container
+- **AND** the video SHALL NOT automatically play when the page loads
 
-#### Scenario: Bilibili player loads with correct video
+#### Scenario: Bilibili player loads with correct video and autoplay disabled
 
 - **GIVEN** the Bilibili video player component is rendered
 - **WHEN** the component initializes
 - **THEN** the player SHALL load video with bvid `BV1pirZBuEzq`
 - **AND** the player SHALL load video part 1 (`p=1`)
 - **AND** the player SHALL use external embed mode (`isOutside=true`)
+- **AND** the player SHALL have autoplay disabled (`autoplay=0`)
 - **AND** the player SHALL support fullscreen viewing
+- **AND** the video SHALL remain paused until the user clicks the play button
 
 #### Scenario: Video player matches homepage design
 
