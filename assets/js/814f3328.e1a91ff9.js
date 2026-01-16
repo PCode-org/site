@@ -1,1 +1,0 @@
-"use strict";(globalThis.webpackChunkhagicode_docs=globalThis.webpackChunkhagicode_docs||[]).push([[7472],{5513(e){e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"Welcome to Hagicode","permalink":"/site/blog/welcome","unlisted":false,"date":"2025-01-08T00:00:00.000Z"}]}')}}]);
