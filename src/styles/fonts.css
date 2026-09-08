@@ -116,11 +116,11 @@
      组合字体栈 - 中英文混排优化
      ============================================ */
 
-  /* 正文/UI 字体 - 中英文混排优先 */
-  --font-body: var(--font-cn-sans);
+  /* 正文/UI 字体 - 英文优先，中文按字形自动回退 */
+  --font-body: var(--font-en-sans), var(--font-cn-sans);
 
-  /* 标题字体 - 更粗的显示效果 */
-  --font-heading: var(--font-cn-sans);
+  /* 标题字体 - 保持英文标题的字形，同时支持中文 */
+  --font-heading: var(--font-en-sans), var(--font-cn-sans);
 
   /* 代码字体 - 等宽优先 */
   --font-code:

@@ -67,8 +67,8 @@
 
   /* 字体 */
   --font-display: var(--font-heading);
-  --font-body: var(--font-body);
-  --font-code: var(--font-code);
+  --font-body: var(--font-en-sans), var(--font-cn-sans);
+  --font-code: var(--font-en-mono), var(--font-cn-mono);
 }
 
 /* ==========================================================================
