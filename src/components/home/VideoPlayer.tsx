@@ -26,7 +26,12 @@ export default function VideoPlayer({ video }: VideoPlayerProps) {
             loading="lazy"
             allowFullScreen={true}
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            sandbox="allow-forms allow-scripts allow-same-origin allow-presentation"
+            referrerPolicy="strict-origin-when-cross-origin"
+            sandbox={
+              video.provider === 'youtube'
+                ? undefined
+                : 'allow-forms allow-scripts allow-same-origin allow-presentation'
+            }
           />
         </div>
       </div>
